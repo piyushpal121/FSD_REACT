@@ -10,14 +10,16 @@ import  Login from './Components/Login'
 import  Registration from './Components/Registration'
 
 function App() {
+  const[store, setStore]=useState("");
   return (
     <>
       <div>
+        {JSON.stringify(store)}
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route path="/login" element={<Login />}></Route>
-              <Route path="/registration" element={<Registration />}></Route>
+              <Route path="/registration" element={<Registration regData={setStore}/>}></Route>
               <Route path="/dashboard" element={<Dashboard />}></Route>
             </Route>
           </Routes>
