@@ -5,6 +5,7 @@ function Registration({regData}) {
   const[email, setEmail] = useState("");
   const[password, setPassword] = useState("");
 
+  // Function to get values from Registration Form.
   function getData(e){
     e.preventDefault();
     const data={
