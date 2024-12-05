@@ -11,7 +11,8 @@ function Registration({regData}) {
     const data={
       name, email, password
     };
-    regData(data)
+    regData(data);
+    alert('Registration Successfull, You can login now !')
   }
 
   return (

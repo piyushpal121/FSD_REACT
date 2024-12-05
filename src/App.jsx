@@ -14,14 +14,15 @@ function App() {
   return (
     <>
       <div>
-        {JSON.stringify(store)}
         <BrowserRouter>
+        {/* {JSON.stringify(store)} */}
           <Routes>
             <Route path="/" element={<MainLayout />}>
-              <Route path="/login" element={<Login />}></Route>
+              <Route path="/home" ></Route>
+              <Route path="/login" element={<Login regDataLogin={store}/>}></Route>
               <Route path="/registration" element={<Registration regData={setStore}/>}></Route>
-              <Route path="/dashboard" element={<Dashboard />}></Route>
             </Route>
+              <Route path="/dashboard" element={<Dashboard />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
